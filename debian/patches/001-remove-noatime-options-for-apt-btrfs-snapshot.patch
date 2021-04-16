@@ -1,0 +1,9 @@
+Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
+
+--- partman-btrfs-54.orig/mountoptions/btrfs
++++ partman-btrfs-54/mountoptions/btrfs
+@@ -1,4 +1,3 @@
+-noatime
+ nodiratime
+ relatime
+ nodev
