@@ -2,7 +2,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
 --- partman-btrfs-54.orig/fstab.d/btrfs
 +++ partman-btrfs-54/fstab.d/btrfs
-@@ -12,21 +12,70 @@ for dev in $DEVICES/*; do
+@@ -12,21 +12,73 @@ for dev in $DEVICES/*; do
  		[ -f "$id/acting_filesystem" ] || continue
  		method=$(cat $id/method)
  		filesystem=$(cat $id/acting_filesystem)
@@ -17,6 +17,9 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
  				rm -f $id/options/noexec
  			fi
 +			options=$(get_mountoptions $dev $id)
++			if [ "$options" = defaults ]; then
++				options="relatime,discard,compress,autodefrag"
++			fi
  			if [ "$mountpoint" = "/" ]; then
 -				options="$(get_mountoptions $dev $id),subvol=@rootfs"
 -			else

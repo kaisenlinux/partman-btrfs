@@ -1,3 +1,12 @@
+partman-btrfs (54-1kaisen3) kaisen-testing; urgency=medium
+
+  * Remove noatime and noadirtime at mountoptions and add autodefrag
+    option on new quilt patch
+  * Add if statement on btrfs subvolumes patch to define defaults
+    mountoptions of /etc/fstab file for all mount points
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Tue, 20 Apr 2021 05:22:47 +0200
+
 partman-btrfs (54-1kaisen2) kaisen-testing; urgency=medium
 
   * Remove noatime at mountoptions because this option not permit delete

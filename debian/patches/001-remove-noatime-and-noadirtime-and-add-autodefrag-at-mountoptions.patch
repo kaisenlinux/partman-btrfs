@@ -2,8 +2,14 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
 --- partman-btrfs-54.orig/mountoptions/btrfs
 +++ partman-btrfs-54/mountoptions/btrfs
-@@ -1,4 +1,3 @@
+@@ -1,5 +1,3 @@
 -noatime
- nodiratime
+-nodiratime
  relatime
  nodev
+ nosuid
+@@ -17,3 +15,4 @@ noacl
+ notreelog
+ flushoncommit
+ discard
++autodefrag
