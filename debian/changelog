@@ -1,3 +1,9 @@
+partman-btrfs (54-1kaisen4) kaisen-packages; urgency=medium
+
+  * Change compress to compress=zstd on defaults mountoptions on fstab.d/
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Thu, 22 Apr 2021 17:53:04 +0200
+
 partman-btrfs (54-1kaisen3) kaisen-testing; urgency=medium
 
   * Remove noatime and noadirtime at mountoptions and add autodefrag
