@@ -2,7 +2,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
 --- partman-btrfs-54.orig/fstab.d/btrfs
 +++ partman-btrfs-54/fstab.d/btrfs
-@@ -12,21 +12,73 @@ for dev in $DEVICES/*; do
+@@ -12,21 +12,52 @@ for dev in $DEVICES/*; do
  		[ -f "$id/acting_filesystem" ] || continue
  		method=$(cat $id/method)
  		filesystem=$(cat $id/acting_filesystem)
@@ -16,70 +16,50 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 +			if [ "$mountpoint" = /tmp ]; then
  				rm -f $id/options/noexec
  			fi
-+			options=$(get_mountoptions $dev $id)
-+			if [ "$options" = defaults ]; then
-+				options="relatime,discard,compress=zstd"
-+			fi
- 			if [ "$mountpoint" = "/" ]; then
+-			if [ "$mountpoint" = "/" ]; then
 -				options="$(get_mountoptions $dev $id),subvol=@rootfs"
 -			else
 -				options=$(get_mountoptions $dev $id)
-+				options="${options:+$options,}subvol=@"
-+				path="$path"
-+                                echo "$path" / btrfs "$options" 0 0
-+                        fi
-+			if [ "$mountpoint" = "/boot" ]; then
-+                                options="${options:+$options,}subvol=@boot"
-+                                boot_path="$path"
-+                                echo "$boot_path" /boot btrfs "$options" 0 0
-+                        fi
-+			if [ "$mountpoint" = "/home" ]; then
-+				options="${options:+$options,}subvol=@home"
-+				home_path="$path"
-+				echo "$home_path" /home btrfs "$options" 0 0
-+			fi
-+			if [ "$mountpoint" = "/var" ]; then
-+				options="${options:+$options,}subvol=@var"
-+				var_path="$path"
-+				echo "$var_path" /var btrfs "$options" 0 0
-+			fi
-+			if [ "$mountpoint" = "/var/log" ]; then
-+                                options="${options:+$options,}subvol=@var/log"
-+                                varlog_path="$path"
-+                                echo "$varlog_path" /var/log btrfs "$options" 0 0
-+                        fi
-+			if [ "$mountpoint" = "/tmp" ]; then
-+				options="${options:+$options,}subvol=@tmp"
-+				tmp_path="$path"
-+				echo "$tmp_path" /tmp btrfs "$options" 0 0
++			options=$(get_mountoptions $dev $id)
++			if [ $options = defaults ]; then
++				options=relatime,discard,compress=zstd
  			fi
 -			# There is no btrfs fsck
 -			echo "$path" "$mountpoint" btrfs $options 0 0
-+			if [ "$mountpoint" = "/srv" ]; then
++			if [ $mountpoint = / ]; then
++				options="${options:+$options,}subvol=@"
++                        fi
++			if [ $mountpoint = /boot ]; then
++                                options="${options:+$options,}subvol=@boot"
++                        fi
++			if [ $mountpoint = /home ]; then
++				options="${options:+$options,}subvol=@home"
++			fi
++			if [ $mountpoint = /var ]; then
++				options="${options:+$options,}subvol=@var"
++			fi
++			if [ $mountpoint = /var/log ]; then
++                                options="${options:+$options,}subvol=@varlog"
++                        fi
++			if [ $mountpoint = /tmp ]; then
++				options="${options:+$options,}subvol=@tmp"
++			fi
++			if [ $mountpoint = /srv ]; then
 +                                options="${options:+$options,}subvol=@srv"
-+                                srv_path="$path"
-+                                echo "$srv_path" /srv btrfs "$options" 0 0
 +                        fi
-+			if [ "$mountpoint" = "/opt" ]; then
++			if [ $mountpoint = /opt ]; then
 +                                options="${options:+$options,}subvol=@opt"
-+                                opt_path="$path"
-+                                echo "$opt_path" /opt btrfs "$options" 0 0
 +                        fi
-+			if [ "$mountpoint" = "/usr" ]; then
++			if [ $mountpoint = /usr ]; then
 +                                options="${options:+$options,}subvol=@usr"
-+                                usr_path="$path"
-+                                echo "$usr_path" /usr btrfs "$options" 0 0
 +                        fi
-+			if [ "$mountpoint" = "/usr/share" ]; then
-+                                options="${options:+$options,}subvol=@usr/share"
-+                                usrshare_path="$path"
-+                                echo "$usrshare_path" /usr/share btrfs "$options" 0 0
++			if [ $mountpoint = /usr/share ]; then
++                                options="${options:+$options,}subvol=@usrshare"
 +                        fi
-+			if [ "$mountpoint" = "/usr/local" ]; then
-+                                options="${options:+$options,}subvol=@usr/local"
-+                                usrlocal_path="$path"
-+                                echo "$usrlocal_path" /usr/local btrfs "$options" 0 0
++			if [ $mountpoint = /usr/local ]; then
++                                options="${options:+$options,}subvol=@usrlocal"
 +                        fi
++			echo $path $mountpoint $filesystem $options 0 0
  			;;
  		esac
  	done
@@ -133,10 +113,10 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 +		mount -t btrfs -o $options $fs /target$mp
 +		;;
 +	    /var/log)
-+                btrfs subvolume create /target$mp/@var/log
-+                chmod 755 /target$mp/@var/log
++                btrfs subvolume create /target$mp/@varlog
++                chmod 755 /target$mp/@varlog
 +                umount /target$mp
-+                options="${options:+$options,}subvol=@var/log"
++                options="${options:+$options,}subvol=@varlog"
 +                mount -t btrfs -o $options $fs /target$mp
 +		;;
 +	    /tmp)
@@ -168,17 +148,17 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 +                mount -t btrfs -o $options $fs /target$mp
 +                ;;
 +	    /usr/share)
-+                btrfs subvolume create /target$mp/@usr/share
-+                chmod 755 /target$mp/@usr/share
++                btrfs subvolume create /target$mp/@usrshare
++                chmod 755 /target$mp/@usrshare
 +                umount /target$mp
-+                options="${options:+$options,}subvol=@usr/share"
++                options="${options:+$options,}subvol=@usrshare"
 +                mount -t btrfs -o $options $fs /target$mp
 +                ;;
 +            /usr/local)
-+                btrfs subvolume create /target$mp/@usr/local
-+                chmod 755 /target$mp/@usr/local
++                btrfs subvolume create /target$mp/@usrlocal
++                chmod 755 /target$mp/@usrlocal
 +                umount /target$mp
-+                options="${options:+$options,}subvol=@usr/local"
++                options="${options:+$options,}subvol=@usrlocal"
 +                mount -t btrfs -o $options $fs /target$mp
 +                ;;
 +	esac
