@@ -18,7 +18,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
  			fi
 +			options=$(get_mountoptions $dev $id)
 +			if [ "$options" = defaults ]; then
-+				options="relatime,discard,autodefrag,compress=zstd"
++				options="relatime,discard,compress=zstd"
 +			fi
  			if [ "$mountpoint" = "/" ]; then
 -				options="$(get_mountoptions $dev $id),subvol=@rootfs"
