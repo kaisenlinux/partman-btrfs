@@ -1,3 +1,10 @@
+partman-btrfs (54-1kaisen8) kaisen-packages; urgency=medium
+
+  * Remove datacow,datasum and acl mountoptions
+    because these options are used automatically by default.
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 15 May 2021 19:14:58 +0200
+
 partman-btrfs (54-1kaisen7) kaisen-packages; urgency=medium
 
   * Add datacow,datasum and acl mount options in fstab file

@@ -22,7 +22,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 -				options=$(get_mountoptions $dev $id)
 +			options=$(get_mountoptions $dev $id)
 +			if [ $options = defaults ]; then
-+				options=relatime,discard,compress=zstd,datacow,datasum,acl
++				options=relatime,discard,compress=zstd
  			fi
 -			# There is no btrfs fsck
 -			echo "$path" "$mountpoint" btrfs $options 0 0
