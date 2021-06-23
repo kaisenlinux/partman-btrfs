@@ -1,3 +1,11 @@
+partman-btrfs (54-1kaisen9) kaisen-packages; urgency=medium
+
+  * Remove compression to improve performances on HDD.
+  * Add datacow and datasum to force mount these options
+    if compression is disabled
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Wed, 23 Jun 2021 18:52:49 +0200
+
 partman-btrfs (54-1kaisen8) kaisen-packages; urgency=medium
 
   * Remove datacow,datasum and acl mountoptions
