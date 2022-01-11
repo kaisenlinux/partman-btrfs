@@ -2,7 +2,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 
 --- partman-btrfs-54.orig/fstab.d/btrfs
 +++ partman-btrfs-54/fstab.d/btrfs
-@@ -12,21 +12,52 @@ for dev in $DEVICES/*; do
+@@ -12,21 +12,49 @@ for dev in $DEVICES/*; do
  		[ -f "$id/acting_filesystem" ] || continue
  		method=$(cat $id/method)
  		filesystem=$(cat $id/acting_filesystem)
@@ -28,9 +28,6 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 -			echo "$path" "$mountpoint" btrfs $options 0 0
 +			if [ $mountpoint = / ]; then
 +				options="${options:+$options,}subvol=@"
-+                        fi
-+			if [ $mountpoint = /boot ]; then
-+                                options="${options:+$options,}subvol=@boot"
 +                        fi
 +			if [ $mountpoint = /home ]; then
 +				options="${options:+$options,}subvol=@home"
@@ -65,7 +62,7 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
  	done
 --- partman-btrfs-54.orig/mount.d/btrfs
 +++ partman-btrfs-54/mount.d/btrfs
-@@ -11,19 +11,90 @@ pass=$6
+@@ -11,19 +11,83 @@ pass=$6
  
  case $type in
      btrfs)
@@ -91,13 +88,6 @@ Author: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 +		options="${options:+$options,}subvol=@"
 +		mount -t btrfs -o $options $fs /target$mp
 +		;;
-+	    /boot)
-+                btrfs subvolume create /target$mp/@boot
-+                chmod 755 /target$mp/@boot
-+                umount /target$mp
-+                options="${options:+$options,}subvol=@boot"
-+                mount -t btrfs -o $options $fs /target$mp
-+                ;;
 +	    /home)
 +		btrfs subvolume create /target$mp/@home
 +		chmod 755 /target$mp/@home
