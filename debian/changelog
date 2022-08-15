@@ -1,3 +1,25 @@
+partman-btrfs (55-1kaisen) kaisen-packages; urgency=medium
+
+  * Import new upstream release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 15 Aug 2022 14:49:47 +0100
+
+partman-btrfs (55) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Dutch (nl.po) by Frans Spiesschaert
+  * Norwegian Nynorsk (nn.po) by aujawindar
+  * Simplified Chinese (zh_CN.po) by Wenbin Lv
+
+  [ Debian Janitor ]
+  * Build-Depends: Drop versioned constraint on po-debconf.
+  * partman-btrfs: Drop versioned constraint on partman-base and
+    partman-basicfilesystems in Depends.
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 28 May 2022 17:26:19 +0200
+
 partman-btrfs (54-1kaisen12) kaisen-packages; urgency=medium
 
   * Reintroduce BTRFS subvolume for /boot

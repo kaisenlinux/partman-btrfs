@@ -30,14 +30,16 @@
 # Yangfl <mmyangfl@gmail.com>, 2017.
 # Boyuan Yang <073plan@gmail.com>, 2018, 2019, 2020.
 # 玉堂白鹤 <yjwork@qq.com>, 2020.
+# TTT DEAL <ikmn2jlt@linshiyouxiang.net>, 2021.
+# Wenbin Lv <wenbin816@gmail.com>, 2022.
 #
 msgid ""
 msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2021-01-08 09:32+0000\n"
-"Last-Translator: Liao junchao <liaojunchao@outlook.com>\n"
+"PO-Revision-Date: 2022-04-17 17:12+0000\n"
+"Last-Translator: Wenbin Lv <wenbin816@gmail.com>\n"
 "Language-Team: <debian-l10n-chinese@lists.debian.org>\n"
 "Language: zh_CN\n"
 "MIME-Version: 1.0\n"
@@ -80,7 +82,8 @@ msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"您的根文件系统是 btrfs 文件系统。这可能与安装程序默认使用的启动引导器冲突。"
+"您的根文件系统是 btrfs 文件系统。安装程序默认使用的启动引导器不支持此文件系"
+"统。"
 
 #. Type: error
 #. Description
@@ -89,7 +92,8 @@ msgstr ""
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
-msgstr "您应该使用一个配以其他文件系统的较小的 /boot 分区，例如 ext4。"
+msgstr ""
+"您应该分配一个较小的 /boot 分区，并将其格式化为其他文件系统，例如 ext4。"
 
 #. Type: error
 #. Description
@@ -106,8 +110,8 @@ msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"您已将一个 btrfs 文件系统挂载为 /boot。这可能与安装程序默认使用的启动引导器冲"
-"突。"
+"您已将一个 btrfs 文件系统挂载为 /boot。安装程序默认使用的启动引导器不支持此文"
+"件系统。"
 
 #. Type: error
 #. Description

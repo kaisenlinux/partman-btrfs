@@ -11,6 +11,7 @@
 # Eirik U. Birkeland <eirbir@gmail.com>, 2010.
 # Allan Nordhøy <epost@anotheragency.no>, 2017.
 # Alexander Jansen <bornxlo@gmail.com>, 2018.
+# aujawindar <eivind.odegard@sogn.no>, 2022.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry <mckinstry@computer.org>, 2001.
@@ -26,8 +27,8 @@ msgstr ""
 "Project-Id-Version: nn\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2019-08-28 18:10+0000\n"
-"Last-Translator: leela <53352@protonmail.com>\n"
+"PO-Revision-Date: 2022-04-17 17:12+0000\n"
+"Last-Translator: aujawindar <eivind.odegard@sogn.no>\n"
 "Language-Team: Norwegian Nynorsk <i18n-nn@lister.ping.uio.no>\n"
 "Language: nn\n"
 "MIME-Version: 1.0\n"
@@ -45,35 +46,32 @@ msgstr ""
 #. Short file system name (untranslatable in many languages)
 #: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
 msgid "btrfs"
-msgstr ""
+msgstr "btrfs"
 
 #. Type: text
 #. Description
 #. :sl2:
 #. File system name
 #: ../partman-btrfs.templates:2001
-#, fuzzy
 msgid "btrfs journaling file system"
-msgstr "Ext3 journalførande filsystem"
+msgstr "btrfs journalførande filsystem"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
 msgid "btrfs root file system not supported without separate /boot"
-msgstr "Bruka eit filsystem som ikkje er støtta på /boot?"
+msgstr "btrfs-rotfilsystem er ikkje støtta utan eigen /boot-partisjon"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
 msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"Rotfilsystemet ditt er eit JFS-filsystem. Dette kan føra til problem med "
+"Rotfilsystemet ditt er eit btrfs-filsystem. Det er ikkje støtta av "
 "oppstartslastaren som vert brukt som standard av dette "
 "installasjonsprogrammet."
 
@@ -81,31 +79,28 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
 msgstr ""
-"Du bør bruke ein liten /boot-partisjon med eit anna filsystem, slik som ext3."
+"Du bør bruke ein liten /boot-partisjon med eit anna filsystem, slik som ext4."
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
 msgid "btrfs file system not supported for /boot"
-msgstr "Bruka eit filsystem som ikkje er støtta på /boot?"
+msgstr "btrfs-filsystemet er ikkje støtta på /boot"
 
 #. Type: error
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
 msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"Du har monert eit JFS-filsystem som /boot. Dette kan føra til problem med "
+"Du har monert eit btrfs-filsystem som /boot. Dette er ikkje støtta av "
 "oppstartslastaren som vert brukt som standard av dette "
 "installasjonsprogrammet."
 
@@ -113,7 +108,6 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
 msgid ""
 "You should use another file system, such as ext4, for the /boot partition."
-msgstr "Du bør bruke eit anna filsystem, slik som ext3, for /boot-partisjonen."
+msgstr "Du bør bruke eit anna filsystem, slik som ext4, for /boot-partisjonen."
