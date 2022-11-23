@@ -1,3 +1,18 @@
+partman-btrfs (56-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the new upstream release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Tue, 22 Nov 2022 16:31:26 +0100
+
+partman-btrfs (56) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Vietnamese (vi.po) by Trần Ngọc Quân
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 21 Aug 2022 18:22:04 +0200
+
 partman-btrfs (55-1kaisen) kaisen-packages; urgency=medium
 
   * Import new upstream release
