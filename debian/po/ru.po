@@ -27,8 +27,8 @@ msgstr ""
 "Project-Id-Version: ru\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2020-11-16 07:09+0300\n"
-"Last-Translator: Yuri Kozlov <yuray@komyakino.ru>\n"
+"PO-Revision-Date: 2022-12-11 12:17+0500\n"
+"Last-Translator: Lev Lamberov <dogsleg@debian.org>\n"
 "Language-Team: Russian <debian-l10n-russian@lists.debian.org>\n"
 "Language: ru\n"
 "MIME-Version: 1.0\n"
@@ -62,7 +62,7 @@ msgstr "Журналируемая файловая система btrfs"
 #. :sl2:
 #: ../partman-btrfs.templates:4001
 msgid "btrfs root file system not supported without separate /boot"
-msgstr "Корневая файловая система не поддерживается без отдельного /boot"
+msgstr "Корневая файловая система btrfs не поддерживается без отдельного /boot"
 
 #. Type: error
 #. Description

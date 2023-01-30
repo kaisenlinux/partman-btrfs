@@ -1,3 +1,25 @@
+partman-btrfs (57-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the new upstream release
+  * Update defaults mountoptions for BTRFS to improve BTRFS performances
+  * Remove the 001-remove-noatime-and-noadirtime-and-add-autodefrag-at-mountoptions.patch
+    because these options can be reused on Kaisen
+  * Add the Standards-Version field in the control file
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 30 Jan 2023 02:50:44 +0100
+
+partman-btrfs (57) unstable; urgency=medium
+
+  * Team upload
+
+  [ Holger Wansing ]
+  * Set Standards-Version to 3.8.4 (checked).
+
+  [ Updated translations ]
+  * Russian (ru.po) by Lev Lamberov
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 08 Jan 2023 00:08:58 +0100
+
 partman-btrfs (56-1kaisen) kaisen-packages; urgency=medium
 
   * Import the new upstream release

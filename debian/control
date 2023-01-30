@@ -5,6 +5,7 @@ XSBC-Original-Maintainer: Debian Install System Team <debian-boot@lists.debian.o
 Maintainer: Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>
 Build-Depends: debhelper-compat (= 13), dh-di, po-debconf
 Rules-Requires-Root: no
+Standards-Version: 3.8.4
 Vcs-Browser: https://gitlab.com/kaisenlinux/packages/partman-btrfs
 Vcs-Git: https://gitlab.com/kaisenlinux/packages/partman-btrfs.git
 
