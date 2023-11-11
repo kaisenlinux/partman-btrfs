@@ -1,3 +1,18 @@
+partman-btrfs (60-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the new upstream release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sat, 11 Nov 2023 16:23:13 +0100
+
+partman-btrfs (60) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Polish (pl.po) by Matthaiks
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 24 Sep 2023 11:56:38 +0200
+
 partman-btrfs (59-1kaisen) kaisen-packages; urgency=medium
 
   * Import the new upstream release
