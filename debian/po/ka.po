@@ -25,7 +25,7 @@ msgstr ""
 "Project-Id-Version: debian-installer.2006071\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2023-04-09 20:53+0000\n"
+"PO-Revision-Date: 2024-09-21 07:40+0000\n"
 "Last-Translator: Temuri Doghonadze <temuri.doghonadze@gmail.com>\n"
 "Language-Team: Georgian\n"
 "Language: ka\n"
@@ -52,7 +52,7 @@ msgstr "btrfs"
 #. File system name
 #: ../partman-btrfs.templates:2001
 msgid "btrfs journaling file system"
-msgstr "btrfs ჟურნალური ფაილური სისტემა"
+msgstr "btrfs ჟურნალიანი ფაილური სისტემა"
 
 #. Type: error
 #. Description
@@ -70,8 +70,8 @@ msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"თქვენ ძირითად ფაილურ სისტემად გაქვთ btrfs. იგი არ არის მხარდაჭერილი "
-"ინსტალერის ნაგულისხმევი სისტემური ჩამტვირთველის მიერ."
+"თქვენ ძირითად ფაილურ სისტემად გაქვთ btrfs. მხარდაუჭერილია დაყენების "
+"პროგრამის ნაგულისხმევი სისტემური ჩამტვირთველის მიერ."
 
 #. Type: error
 #. Description
@@ -97,8 +97,8 @@ msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"თქვენ /boot ფაილურ სისტემად btrfs დაამონტაჟეთ. იგი არ არის თავსებადი "
-"ინსტალერის ნაგულისხმევ სისტემურ ჩამტვირთველთან."
+"თქვენ /boot ფაილურ სისტემად btrfs მიუთითეთ. იგი არ არის თავსებადი დაყენების "
+"პროგრამის ნაგულისხმევ სისტემურ ჩამტვირთველთან."
 
 #. Type: error
 #. Description

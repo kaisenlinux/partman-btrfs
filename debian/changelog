@@ -1,3 +1,28 @@
+partman-btrfs (62-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the new upstream release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Mon, 13 Jan 2025 21:57:39 +0200
+
+partman-btrfs (62) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Persian (fa.po) by Danial Behzadi
+  * Hebrew (he.po) by Yaron Shahrabani
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sat, 30 Nov 2024 00:16:05 +0100
+
+partman-btrfs (61) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Georgian (ka.po) by Temuri Doghonadze
+
+ -- Holger Wansing <hwansing@mailbox.org>  Sun, 13 Oct 2024 23:22:20 +0200
+
 partman-btrfs (60-2kaisen) kaisen-packages; urgency=medium
 
   * Create subvolumes only for / and /home mountpoints

@@ -7,6 +7,8 @@
 # Copyright (C) 2003 Software in the Public Interest, Inc.
 # This file is distributed under the same license as debian-installer.
 # Nima Sahraneshin <unix.nima@gmail.com>, 2018.
+# Seyed Hany Hosseini <hany1894@gmail.com>, 2020.
+# <soheilkhanalipur@tutanota.com>, 2020.
 #
 # Translations from iso-codes:
 #   Alastair McKinstry - further translations from ICU-3.0
@@ -21,11 +23,11 @@
 #
 msgid ""
 msgstr ""
-"Project-Id-Version: fa\n"
+"Project-Id-Version: fa sublevel1\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2019-01-01 17:49+0000\n"
-"Last-Translator: nima sahraneshin <unix.nima@gmail.com>\n"
+"PO-Revision-Date: 2024-11-04 17:34+0000\n"
+"Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Debian-l10n-persian <debian-l10n-persian@lists.debian.org>\n"
 "Language: fa\n"
 "MIME-Version: 1.0\n"
@@ -58,7 +60,7 @@ msgstr "فایل‌سیستم btrfs journaling"
 #. :sl2:
 #: ../partman-btrfs.templates:4001
 msgid "btrfs root file system not supported without separate /boot"
-msgstr "فایل سیستم روت btrfs بدون /boot مجزی پشتیبانی نمی‌شود."
+msgstr "سامانه پروندهٔ ریشهٔ btrfs بدون ‪/boot‬ جدا پشتیبانی نمی‌شود"
 
 #. Type: error
 #. Description
@@ -75,12 +77,11 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:4001
-#, fuzzy
 msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
 msgstr ""
-"می‌بایست پارتیشن /boot کوچکی با فایل‌سیستم دیگری استفاده کنید، مانند ext3."
+"باید از افراز کوچکی برای ‪/boot‬ با سامانه پرونده‌ای دیگر چون ext4 استفاده کنید."
 
 #. Type: error
 #. Description
@@ -104,7 +105,6 @@ msgstr ""
 #. Description
 #. :sl2:
 #: ../partman-btrfs.templates:5001
-#, fuzzy
 msgid ""
 "You should use another file system, such as ext4, for the /boot partition."
-msgstr "می‌بایست فایل‌سیستم دیگری نظیر ext3 برای /boot استفاده کنید."
+msgstr "باید از سامانه پرونده‌ای دیگر چون ext4 برای افراز ‪/boot‬ استفاده کنید."
