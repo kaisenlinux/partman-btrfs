@@ -1,3 +1,29 @@
+partman-btrfs (64-1kaisen) kaisen-packages; urgency=medium
+
+  * Import the new upstream release
+
+ -- Kevin Chevreuil - Kaisen <kaisen@kaisenlinux.org>  Sun, 10 Aug 2025 03:45:36 +0200
+
+partman-btrfs (64) unstable; urgency=medium
+
+  [ Updated translations ]
+  * Uyghur (ug.po) by Abduqadir Abliz
+
+ -- Cyril Brulebois <kibi@debian.org>  Sun, 29 Jun 2025 14:57:06 +0200
+
+partman-btrfs (63) unstable; urgency=medium
+
+  * Team upload
+
+  [ Updated translations ]
+  * Persian (fa.po) by Danial Behzadi
+  * Hungarian (hu.po) by Szia Tomi
+  * Polish (pl.po) by Matthaiks
+  * Romanian (ro.po) by Remus-Gabriel Chelu
+  * Serbian (sr.po) by Мирослав Николић
+
+ -- Holger Wansing <hwansing@mailbox.org>  Wed, 02 Apr 2025 09:16:44 +0200
+
 partman-btrfs (62-1kaisen) kaisen-packages; urgency=medium
 
   * Import the new upstream release

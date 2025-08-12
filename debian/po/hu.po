@@ -21,7 +21,7 @@
 #   Kalman Kemenczy <kkemenczy@gmail.com>, 2010.
 #   Andras TIMAR <timar@gnome.hu>, 2000-2001.
 # SZERVÁC Attila <sas@321.hu>, 2012.
-# Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>, 2012.
+# Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>, 2012, 2018.
 # Judit Gyimesi <judit.gyimesi.x@gmail.com>, 2013.
 #
 msgid ""
@@ -29,8 +29,8 @@ msgstr ""
 "Project-Id-Version: debian-installer\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2017-11-26 20:32+0000\n"
-"Last-Translator: Dr. Nagy Elemér Károly <eknagy@omikk.bme.hu>\n"
+"PO-Revision-Date: 2025-03-08 03:27+0000\n"
+"Last-Translator: Szia Tomi <sziatomi01@gmail.com>\n"
 "Language-Team: Debian L10n Hungarian <debian-l10n-hungarian@lists.debian."
 "org>\n"
 "Language: hu\n"
@@ -68,7 +68,8 @@ msgstr "btrfs naplózó fájlrendszer"
 #. :sl2:
 #: ../partman-btrfs.templates:4001
 msgid "btrfs root file system not supported without separate /boot"
-msgstr "A btrfs fájlrendszer gyökérként nem támogatott külön /boot nélkül"
+msgstr ""
+"A btrfs fájlrendszer gyökérként nem támogatott külön /boot partíció nélkül"
 
 # Type: boolean
 # Description
@@ -81,8 +82,8 @@ msgid ""
 "Your root file system is a btrfs file system. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"A gyökér fájlrendszered btrfs fájlrendszer. Ez nem támogatott a telepítő "
-"által alapértelmezetten használt rendszerindítóval."
+"A gyökér (root) fájlrendszered egy btrfs fájlrendszer. Ezt nem támogatja a "
+"telepítő által alapértelmezetten használt rendszerbetöltő."
 
 # Type: boolean
 # Description
@@ -95,7 +96,8 @@ msgid ""
 "You should use a small /boot partition with another file system, such as "
 "ext4."
 msgstr ""
-"Inkább más fájlrendszerrel (pl: ext4) hozz létre egy kis /boot partíciót."
+"Inkább egy másik fájlrendszerrel (pl: ext4) hozz létre egy kisméretű /boot "
+"partíciót."
 
 # Type: error
 # Description
@@ -105,7 +107,7 @@ msgstr ""
 #. :sl2:
 #: ../partman-btrfs.templates:5001
 msgid "btrfs file system not supported for /boot"
-msgstr "A btrfs fájlrendszer nem támogatott a /boot-on"
+msgstr "A btrfs fájlrendszer nem támogatott /boot partícióként"
 
 # Type: boolean
 # Description
@@ -118,8 +120,8 @@ msgid ""
 "You have mounted a btrfs file system as /boot. This is not supported by the "
 "boot loader used by default by this installer."
 msgstr ""
-"Egy btrfs fájlrendszert csatoltál fel /boot-ként. Ezt nem támogatja a "
-"telepítő alapértelmezetten használt rendszerindítója."
+"Egy btrfs fájlrendszert csatoltál fel /boot partícióként. Ezt nem támogatja "
+"a telepítő által alapértelmezetten használt rendszerbetöltő."
 
 # Type: boolean
 # Description
@@ -131,4 +133,4 @@ msgstr ""
 msgid ""
 "You should use another file system, such as ext4, for the /boot partition."
 msgstr ""
-"Inkább másik fájlrendszert, például ext4-et használj a /boot partícióhoz."
+"Inkább egy másik fájlrendszert (például ext4) használj a /boot partícióhoz."

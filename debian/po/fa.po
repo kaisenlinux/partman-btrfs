@@ -26,7 +26,7 @@ msgstr ""
 "Project-Id-Version: fa sublevel1\n"
 "Report-Msgid-Bugs-To: partman-btrfs@packages.debian.org\n"
 "POT-Creation-Date: 2016-10-04 22:00+0000\n"
-"PO-Revision-Date: 2024-11-04 17:34+0000\n"
+"PO-Revision-Date: 2024-12-10 10:00+0000\n"
 "Last-Translator: Danial Behzadi <dani.behzi@ubuntu.com>\n"
 "Language-Team: Debian-l10n-persian <debian-l10n-persian@lists.debian.org>\n"
 "Language: fa\n"
@@ -45,7 +45,7 @@ msgstr ""
 #. Short file system name (untranslatable in many languages)
 #: ../partman-btrfs.templates:1001 ../partman-btrfs.templates:3001
 msgid "btrfs"
-msgstr "بی‌تی‌آر‌اف‌اس"
+msgstr "btrfs"
 
 #. Type: text
 #. Description
